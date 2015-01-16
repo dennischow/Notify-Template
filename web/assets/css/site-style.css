@@ -1,0 +1,392 @@
+/* 
+-- Author --
+
+Name : Dennis Chow; 
+Website : http://www.fat-cow.net
+*/
+
+
+/*
+-- Colors --
+
+Base Text Color : #000000;
+Brand Color Green: #2ECC71;
+Light Grey : #E3E3E3;
+Grey : #999999;
+*/
+
+
+/* General Starts */
+BODY {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #000;
+	overflow-x: hidden; 
+}
+.invisiable {
+	visibility: hidden;
+	opacity: 0;
+}
+.title {
+	font-family: 'Oswald', sans-serif;
+	font-size: 24px;
+	line-height: 1.5em;
+	color: black;
+}
+.shape-circle {
+	display: inline-block;
+	width: 32px; height: 32px;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	text-align: center;
+}
+#page-view:before {
+	display: block;
+	position: relative;
+	content: '';
+	width: 100%; height: 10px;
+	background-color: #2ECC71;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+	z-index: 15;
+}
+/* General Ends */
+
+
+
+/* Layout Starts */
+.section {
+	padding: 60px 0;
+	background-color: white;
+	z-index: 10;
+}
+.section, 
+.section .container {
+	position: relative;
+}
+
+.section .container {
+	z-index: 10;
+}
+.section-grid {
+	position: relative;
+	margin: 0 auto;
+	width: 100%; height: 100%;
+	max-width: 1170px; /* Sticks with Bootstrap Grid */
+	overflow: hidden;
+}
+/* Layout Ends */
+
+
+
+/* Banner Starts */
+.site-banner {
+	/*position: fixed;
+	left: 0; top: 0;*/
+	padding: 0;
+	width: 100%; height: 600px;
+	/*border-top: 10px #2ECC71 solid;*/
+	background-image: url(../images/banner-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center -80px;
+}
+.site-banner .dim {
+	position: absolute;
+	left: 0; top: 0;
+	width: 100%; height: 100%;
+	background-color: black;
+	opacity: 0.5;
+	z-index: 0;
+}
+.site-banner .intro {
+	position: relative;
+	padding: 0 540px 0 135px;
+	left: 0; top: 135px;
+	z-index: 5;
+}
+.site-banner .iphone {
+	position: absolute;
+	right: 55px; bottom: -15px;
+	width: 460px; height: 530px;
+	background-image: url(../images/iphone-holding.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	z-index: 0;
+}
+.site-banner .branding {
+	display: inline-block;
+	width: 190px; height: 90px;
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-image: url(../images/notify-logo-shadow.png);
+}
+.site-banner .statment {
+	margin: 15px 0;
+	color: white;
+	font-size: 24px;
+	line-height: 1.5em;
+	text-shadow: 0 2px 3px rgba(0,0,0,0.6);
+}
+.site-banner .shape-circle {
+	width: 52px; height: 52px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	line-height: 52px;
+	font-size: 1.5em;
+	opacity: 0.5;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.site-banner .shape-circle + .shape-circle {
+	margin-left: 10px;
+}
+.site-banner .shape-circle:hover {
+	background-color: #2ECC71;
+	opacity: 1;
+}
+/* Banner Ends */
+
+
+
+
+/* Features Starts */
+.site-features {
+	/*margin-top: 600px;*/
+	-webkit-box-shadow: 0 -1px 2px rgba(0,0,0,0.4);
+	box-shadow: 0 -1px 2px rgba(0,0,0,0.4);
+}
+.site-features .content {
+	text-align: center;
+}
+.site-features .title {
+	margin: 25px 0;
+}
+.site-features P {
+	color: #999;
+	line-height: 1.5em;
+}
+.site-features .shape-circle {
+	width: 98px; height: 98px;
+	background-color: #2ECC71;
+	color: white;
+	font-size: 3.5em;
+	line-height: 98px;
+}
+/* Features Ends */
+
+
+
+
+/* Notification Starts */
+.site-notification {
+	background-color: #E3E3E3;
+}
+.site-notification .title {
+	margin: 0 0 25px 0;
+}
+.site-notification P {
+	color: #999;
+	line-height: 1.5em;
+}
+
+#form-subscribe {margin: 25px 0;}
+#form-subscribe INPUT,
+#form-subscribe BUTTON {
+	padding: 0 20px;
+	height: 48px;
+}
+#form-subscribe INPUT {
+	-webkit-border-radius: 10px 0 0 10px;
+	border-radius: 10px 0 0 10px;
+}
+#form-subscribe BUTTON {
+	width: 140px;
+	border-color: #2ECC71;
+	background-color: #2ECC71;
+	-webkit-border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
+	font-size: 20px;
+}
+/* Notification Ends */
+
+
+
+
+/* Testimonials Starts */
+.site-testimonials {
+	text-align: center;
+}
+.site-testimonials P {
+	margin: 0 auto 10px;
+	max-width: 750px; /* Sticks with Bootstrap Grid */
+	color: #999;
+	line-height: 2em;
+}
+.site-testimonials .title {
+	color: black;
+}
+.site-testimonials .content-slider {
+	margin-bottom: 50px;
+}
+.site-testimonials .content-social P {
+	margin: 15px auto;
+}
+.site-testimonials .content-list {
+	padding: 0;
+	list-style: none;
+}
+.site-testimonials .content-list LI {
+	display: inline-block;
+	position: relative;
+}
+.site-testimonials .thumbnail-list IMG {
+	display: block;
+}
+.site-testimonials .thumbnail-list LI {
+	width: 50px; height: 50px;
+	background-color: #E3E3E3;
+}
+.site-testimonials .thumbnail-list LI + LI {
+	margin-left: 5px;
+}
+.site-testimonials .thumbnail-list LI:before {
+	display: block;
+	position: absolute;
+	left: 0; top: 0;
+	content: '';
+	width: 100%; height: 100%;
+	background-color: #2ECC71;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	opacity: 0;
+}
+.site-testimonials .thumbnail-list LI:hover:before {
+	opacity: 0.5;
+}
+
+/* Overwrite felxslider style */
+.site-testimonials .flexslider {margin: 0 auto; padding: 4px; max-width: 970px; border: none;} /* Sticks with Bootstrap Grid */
+.site-testimonials .flex-control-nav {left: 0; margin-top: -35px;}
+.site-testimonials .flex-direction-nav A {margin-top: -14px; width: 22px; height: 34px;}
+.site-testimonials .flex-direction-nav A:before {font-size: 32px;}
+.site-testimonials .flex-direction-nav .flex-disabled {display: none;}
+
+.site-testimonials .social-list .shape-circle {
+	margin: 0 2px;
+	width: 32px; height: 32px;
+	background-color: #E3E3E3;
+	line-height: 32px;
+	font-size: 1.15em;
+	color: white;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.site-testimonials .social-list .shape-circle:hover {
+	background-color: #2ECC71;
+}
+/* Testimonials Ends */
+
+
+/* Footer Starts */
+.site-footer {
+	padding: 45px 0;
+	background-color: #E3E3E3;
+}
+.site-footer .nav-list {
+	text-align: center;
+}
+.site-footer .nav-list LI {
+	margin: 0 5px;
+	display: inline-block;
+	float: none;
+}
+.site-footer .nav-list A {
+	/*padding: 5px;*/
+	color: #999;
+	font-size: 16px;
+}
+.site-footer .nav-list A:hover {
+	background-color: transparent;
+	color: #2ECC71;
+}
+.site-footer .nav-list A:focus {
+	color: #999;
+	background-color: transparent;
+}
+/* Footer Ends */
+
+
+@media (max-width: 970px) {
+
+	/* Banner Starts */
+	.site-banner .intro {
+		padding: 0 420px 0 85px;
+	}
+
+	.site-banner .iphone {
+		right: -50px;
+	}
+	/* Banner Ends */
+
+}
+
+@media (max-width: 767px) {
+
+	/* Banner Starts */
+	.site-banner .intro {
+		padding: 0 60px;
+		text-align: center;
+	}
+	.site-banner .shape-circle {
+		margin: 0 10px;
+		background-color: #999;
+		opacity: 0.8;
+	}
+	/* Banner Ends */
+
+
+	/* Features Starts */
+	.site-features .content + .content {
+		margin-top: 20px;
+	}
+	/* Features Ends */
+
+
+	/* Footer Starts */
+	.site-footer {
+		padding: 25px 0;
+	}
+	.site-footer .nav-list LI {
+		display: block;
+		margin: 0 10px;
+	}
+	.site-footer .nav-list LI A:hover {
+		background-color: #999;
+		color: white;
+	}
+	/* Footer Ends */
+
+}
+
+@media (max-width: 520px) {
+
+	/* Banner Starts */
+	.site-banner .intro {
+		padding: 0 20px;
+	}
+	.site-banner .iphone {
+		right: -140px;
+	}
+	/* Banner Ends */
+
+
+	/* Notification Starts */
+	#form-subscribe BUTTON {
+		width: 100px;
+		font-size: 18px;
+	}
+	/* Notification Ends */
+}
